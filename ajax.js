@@ -5,31 +5,10 @@ var waitlist = [];
 // Routes
 // =============================================================
 
-// Basic route that sends the user first to the home page
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "new.html"));
-});
+module.exports = function(app) {
+    
+}
 
-// Route to the page where tables/waitlist is displayed
-app.get("/tables", function(req, res) {
-    res.sendFile(path.join(__dirname, "tables.html"));
-});
-
-// Route to the page where users can reserve tables
-app.get("/reserve", function(req, res) {
-    res.sendFile(path.join(__dirname, "reserve.html"));
-});
-  
-// Displays page with all tables (JSON response)
-app.get("/api/tables", function(req, res) {
-return res.json(tables);
-});
-
-// Displays all in waiting list (JSON response)
-app.get("/api/waitlist", function(req, res) {
-    return res.json(waitlist);
-});
-  
   // Displays a single character, or returns false
   app.get("/api/characters/:character", function(req, res) {
     var chosen = req.params.character;
