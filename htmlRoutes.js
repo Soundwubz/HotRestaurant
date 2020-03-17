@@ -3,6 +3,10 @@
 // =============================================================
 var path = require("path");
 
+var server = require('./server.js');
+var app = server.app;
+var PORT = server.PORT;
+
 // =============================================================
 // Export the API routes so that they can be accessed in other files
 // =============================================================

@@ -1,4 +1,12 @@
 // =============================================================
+// Import the server info from server.js
+// =============================================================
+
+var server = require('./server.js');
+var app = server.app;
+var PORT = server.PORT;
+
+// =============================================================
 // Import the arrays from the separate files
 // =============================================================
 var tables = require('????');
