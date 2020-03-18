@@ -1,8 +1,22 @@
 // =============================================================
 // Import the arrays from the separate files
 // =============================================================
-var tables = [];
-var waitlist = [];
+var tables = [
+    {
+        name: "Vince",
+        phone: 5555555555,
+        email: "email@gmail.com",
+        unique_id: 1
+    }
+];
+var waitlist = [
+    {
+        name: "Rando",
+        phone: 555234455,
+        email: "anotheremail@gmail.com",
+        unique_id: 2
+    }
+];
 
 // =============================================================
 // Export the API routes so that they can be accessed in other files
