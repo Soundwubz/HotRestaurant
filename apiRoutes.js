@@ -1,8 +1,8 @@
 // =============================================================
 // Import the arrays from the separate files
 // =============================================================
-var tables = require('????');
-var waitlist = require('????');
+var tables = [];
+var waitlist = [];
 
 // =============================================================
 // Export the API routes so that they can be accessed in other files
