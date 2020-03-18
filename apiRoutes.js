@@ -9,6 +9,16 @@ var waitlist = require('????');
 // =============================================================
 module.exports = function(app) {
 
+      // A GET route with the url /api/tables. This will be used to display a JSON of all possible reservations.
+      app.get("/api/tables", function(req, res) {
+          return res.json(tables);
+      });
+  
+      // A GET route with the url /api/tables. This will be used to display a JSON of all those on a waitlist.
+      app.get("/api/waitlist", function(req, res) {
+          return res.json(waitlist);
+      });
+
     // If the tables array already has five reservations, add new reservations to the waitlist.
     if (tables.length > 4) {
         postWaitlist();
@@ -32,7 +42,7 @@ module.exports = function(app) {
     
       res.json(newReservation);
   
-      return res.json(tables);
+      // return res.json(tables);
     });
   };
   
@@ -52,7 +62,7 @@ module.exports = function(app) {
   
     res.json(newReservation);
   
-    return res.json(waitlist);
+    // return res.json(waitlist);
   });
   };
 
