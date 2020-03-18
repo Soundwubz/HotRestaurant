@@ -62,7 +62,7 @@ module.exports = function(app) {
     //   postTables();
     // }
 
-    function postTables () {
+
         app.post("/api/tables", function(req, res) {
       // req.body hosts is equal to the JSON post sent from the user
       // This works because of our body parsing middleware
@@ -80,27 +80,27 @@ module.exports = function(app) {
   
       // return res.json(tables);
     });
-  };
+
   
-  function postWaitlist () {
-      app.post("/api/waitlist", function(req, res) {
-    // req.body hosts is equal to the JSON post sent from the user
-    // This works because of our body parsing middleware
-    var newReservation = req.body;
+
+//       app.post("/api/waitlist", function(req, res) {
+//     // req.body hosts is equal to the JSON post sent from the user
+//     // This works because of our body parsing middleware
+//     var newReservation = req.body;
   
-    // Using a RegEx Pattern to remove spaces from newCharacter
-    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    newReservation.routeName = newReservation.name.replace(/\s+/g, "").toLowerCase();
+//     // Using a RegEx Pattern to remove spaces from newCharacter
+//     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+//     newReservation.routeName = newReservation.name.replace(/\s+/g, "").toLowerCase();
   
-    console.log(newReservation);
+//     console.log(newReservation);
   
-    waitlist.push(newReservation);
+//     waitlist.push(newReservation);
   
-    res.json(newReservation);
+//     res.json(newReservation);
   
-    // return res.json(waitlist);
-  });
-  };
+//     // return res.json(waitlist);
+//   });
+
 
 };
 // =============================================================
