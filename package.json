@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Soundwubz/HotRestaurant/issues"
   },
-  "homepage": "https://github.com/Soundwubz/HotRestaurant#readme"
+  "homepage": "https://github.com/Soundwubz/HotRestaurant#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
